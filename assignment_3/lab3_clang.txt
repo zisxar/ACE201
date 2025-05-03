@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+int R0=0;
+int R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R12,R13,R14,R15,R16,R17,R18,R19,R20,R21,R22,R23,R24,R25,R26,R27,R28,R29,R30,R31;
+main(){
+       
+       int odd,j;
+       R1=1016865;  /* 0xF8421 */
+       R2=0;
+       R3=7;
+       while_label:
+                    if(R2>R3)goto end_while;
+                    R4=R2&0x1;
+                     if(R4==0) goto end_if;
+                     printf("odd\n");
+                     R1=R1+1;
+                     odd=R1;
+                     end_if:
+                     R2=R2+1;
+                     j=R2;
+                     goto while_label;
+                    end_while:
+                    printf("#Odds %d\n", odd);
+                    return(EXIT_SUCCESS);
+       }
